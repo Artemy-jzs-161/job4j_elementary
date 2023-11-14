@@ -21,7 +21,7 @@ public class Converter {
         int expectedRubToDoll = 2;
         int outRubToDoll = Converter.rubleToDollar(inRubToDoll);
         boolean passedRubToDoll = expectedRubToDoll == outRubToDoll;
-        System.out.println("140 rubles are 2 dollar. Test result : " + passed);
+        System.out.println("140 rubles are 2 dollar. Test result : " + passedRubToDoll);
 
     }
 }
