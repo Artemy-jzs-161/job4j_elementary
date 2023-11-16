@@ -1,8 +1,8 @@
 package ru.job4j.condition;
 
-import org.junit.Assert;
-import org.junit.Test;
-import ru.job4j.condition.DivideBySix;
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.*;
 
 public class DivideBySixTest {
     @Test
@@ -10,7 +10,8 @@ public class DivideBySixTest {
         int in = 24;
         String result = DivideBySix.checkNumber(in);
         String expected = "Исходное число делится на 6.";
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
+
     }
 
     @Test
@@ -18,7 +19,7 @@ public class DivideBySixTest {
         int in = 9;
         String result = DivideBySix.checkNumber(in);
         String expected = "Исходное число делится на 3, но не является четным.";
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -26,7 +27,7 @@ public class DivideBySixTest {
         int in = 14;
         String result = DivideBySix.checkNumber(in);
         String expected = "Исходное число не делится на 3, но является четным.";
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -34,6 +35,6 @@ public class DivideBySixTest {
         int in = 25;
         String result = DivideBySix.checkNumber(in);
         String expected = "Исходное число не делится на 3 и не является четным.";
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 }
